@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap');
+
+/* GRADIENT BACKGROUND
+
+body{
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 25s ease infinite;
+	height: 100vh;
+  font-family: 'Raleway', sans-serif;
+  color: #F8F8F8;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+*/
+
+body{
+  display: grid;
+  background-color: #F8F8F8;
+  font-family: 'Helvetica Neue', 'Raleway', sans-serif;
+
+}
+
+.container{
+    margin-left: 2.5em;
+    margin-top: 4em;
+    margin-bottom: 2em;
+    line-height: 1.8em;
+    font-size: 2em;
+}
+
+details {
+  width: 50vw;  
+  max-width: max-content;
+}
+
+/* LINKS STARTS */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a {
+  background:
+    linear-gradient(
+      to right,
+      rgba(239, 46, 68, 0.1),
+      rgba(239, 46, 70, 0.1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+  );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+a:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+/* LINKS ENDS */
+
+details > summary {
+  border: none;
+  cursor: pointer;
+  list-style: none;
+  margin-left: 5em;
+  margin-top: 1em;
+  line-height: 1.3em;
+}
+
+details > summary:hover{
+  color: #EF2E46;
+  max-width: max-content;
+}
+
+details > p {
+  margin-left: 5em;
+  margin-top: 1rem;
+}
+
+/* FOOTER STARTS */
+
+.footer{
+  display: grid;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer:hover{
+  animation: color-change 1s infinite;
+}
+
+@keyframes color-change {
+  0% { color: #ee7752; }
+  45% { color: #e73c7e; }
+  75% { color: #23a6d5; }
+  100% { color: #23d5ab; }
+}
+
+/* FOOTER ends */
+
+
+/* typing effect */
+
+.type {
+    display:inline-block;
+  }
+  .type > span {
+    display:grid;
+    overflow: hidden;
+    height: .98em;
+  }
+  .type span span {
+    width:0%;
+    max-width:max-content;
+    overflow: hidden;
+    height:inherit;
+    word-break:break-all;
+    animation:
+      c 0.5s infinite steps(1),  
+      t 2s linear infinite alternate,
+      m 12s steps(3) infinite;
+  }
+  .type span span:before {
+    content:" ";
+    display:inline-block;
+  }
+  @keyframes t{
+    90%,100% {width:100%}
+  }
+  @keyframes c{
+    0%,100%{box-shadow:5px 0 0 #0000}
+    50%    {box-shadow:5px 0 0 white  }
+  }
+  @keyframes m{
+    100% {transform:translateY(-300%)}
+  }
